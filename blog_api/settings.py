@@ -40,8 +40,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'drf_spectacular',
-    'dj_rest_auth', 
-    'corsheaders',
+    # 'dj_rest_auth', 
+    # 'corsheaders',
     'accounts.apps.AccountsConfig',
     'posts.apps.PostsConfig',
 ]
