@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'rest_framework.authtoken',
+    'drf_spectacular',
+    'dj_rest_auth', 
     'corsheaders',
     'accounts.apps.AccountsConfig',
     'posts.apps.PostsConfig',
@@ -45,7 +48,11 @@ INSTALLED_APPS = [
 REST_FRAMEWORK={
     "DEFAULT_PERMISSION_CLASSES":[
         "rest_framework.permissions.IsAuthenticated",
-    ]
+        "rest_framework.authentication.TokenAuthentication",
+    
+    ],
+
+ "DEFAULT_SCHEMA_CLASS": 'drf_spectacular.openapi.AutoSchema',
 }
 # new
 CORS_ORIGIN_WHITELIST = (
